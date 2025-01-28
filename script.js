@@ -31,6 +31,7 @@ for (let i = 0; i < num; i++) {
     let box = document.createElement("div");
     box.className = "box";
     boxContainer.appendChild(box);
+    box.addEventListener("click", clipboard);// call clipboard function and eventlistner also added
     box.style.backgroundColor = color;
 
     let input = document.createElement("input");
@@ -47,3 +48,11 @@ for (let i = 0; i < num; i++) {
 function clearBox() {
     document.getElementById("boxcontainer").innerHTML = "";
 }
+
+function clipboard(){
+let color = event.currentTarget.querySelector("input").value; // event defines current target which targets the box which is clicked 
+    navigator.clipboard.writeText(color); // Copy color code to clipboard
+    alert("Copied: " + color);
+    
+} 
+
