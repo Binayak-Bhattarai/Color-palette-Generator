@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palettes Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Color Palette Generator</h1>
+        <br>
+        <label for="number">Number of Palette</label>
+        <input type="number" id="num" placeholder="enetr no of Palatte">
+
+        <label for="Color format">Color Format</label>
+        <select id="format">
+            <option value="HEX">HEX</option>
+            <option value="RGB">RGB</option>
+        </select>
+
+        <div class="buttons">
+            <button id="generate" onclick="generateBox()"> Generate</button>
+            <button id="Clear" onclick=" clearBox()"> Clear</button>
+        </div>
+
+        <div id="boxcontainer">
+
+        </div>
+       
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
